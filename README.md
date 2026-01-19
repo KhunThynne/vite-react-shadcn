@@ -8,7 +8,7 @@ This project is a modern boilerplate for building web applications using **Vite*
 - **[React 19](https://react.dev/)**: The latest version of the popular UI library.
 - **[Shadcn UI](https://ui.shadcn.com/)**: Beautifully designed components built with Radix UI and Tailwind CSS.
 - **[Tailwind CSS v4](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
-- **[React Router v7](https://reactrouter.com/)**: Declarative routing for React applications.
+- **[TanStack Router](https://tanstack.com/router)**: Type-safe routing for React applications.
 - **[TanStack Form](https://tanstack.com/form)**: Powerful and type-safe form state management.
 - **[Zod](https://zod.dev/)**: TypeScript-first schema declaration and validation.
 - **[i18next](https://www.i18next.com/)**: Internationalization framework.
