@@ -1,6 +1,8 @@
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
+import tanstackLogo from "/tanstack.png";
 import { Button } from "@components/ui/button";
 import {
   Card,
@@ -12,7 +14,11 @@ import {
 } from "@components/ui/card";
 import { useTranslation } from "react-i18next";
 
-function App() {
+export const Route = createFileRoute("/")({
+  component: Index,
+});
+
+function Index() {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
   return (
@@ -34,8 +40,15 @@ function App() {
                 alt="React logo"
               />
             </a>
+            <a href="https://tanstack.com" target="_blank" rel="noreferrer">
+              <img
+                src={tanstackLogo}
+                className="size-17 transition-transform hover:scale-110"
+                alt="TanStack logo"
+              />
+            </a>
           </div>
-          <CardTitle className="text-2xl font-bold">Vite + React</CardTitle>
+          <CardTitle className="text-2xl font-bold">Vite</CardTitle>
           <CardDescription>
             Powered by Shadcn UI and Tailwind CSS
           </CardDescription>
@@ -56,7 +69,7 @@ function App() {
           <p className="text-sm text-muted-foreground">
             Edit{" "}
             <code className="bg-muted px-1.5 py-0.5 rounded font-mono text-foreground">
-              src/App.tsx
+              src/routes/index.tsx
             </code>{" "}
             and save to test HMR
           </p>
@@ -70,5 +83,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,7 +1,7 @@
 {
   "Index": {
-    "title": "Vite + React Starter",
-    "description": "เทมเพลตเริ่มต้นครบวงจรด้วย Vite, React, Tailwind, Shadcn และอื่นๆ"
+    "title": "Vite + React Starter + TanStack Router",
+    "description": "เทมเพลตเริ่มต้นครบวงจรด้วย Vite, React, TanStack Router, Tailwind, Shadcn และอื่นๆ"
   },
   "not_found": {
     "description": "ไม่พบ"

@@ -1,7 +1,7 @@
 {
   "Index": {
-    "title": "Vite + React Starter",
-    "description": "A comprehensive boilerplate with Vite, React, Tailwind, Shadcn, and more."
+    "title": "Vite + React Starter + TanStack Router",
+    "description": "A comprehensive boilerplate with Vite, React, TanStack Router, Tailwind, Shadcn, and more."
   },
   "not_found": {
     "description": "Not found"
