@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "My React Extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extension ที่พัฒนาด้วย React, Vite และ Tailwind",
   "action": {
     "default_popup": "index.html",
