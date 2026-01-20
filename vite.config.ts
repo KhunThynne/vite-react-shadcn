@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import tailwindcss from "@tailwindcss/vite";
 import tanstackRouter from "@tanstack/router-plugin/vite";
-import { crx } from "@crxjs/vite-plugin";
-import manifest from "./manifest.json";
+import webExtension from "vite-plugin-web-extension";
 // https://vite.dev/config/
 export default defineConfig({
   resolve: {
@@ -19,7 +18,9 @@ export default defineConfig({
       autoCodeSplitting: true,
     }),
     tailwindcss(),
-    crx({ manifest }),
+    webExtension({
+      manifest: "./manifest.json",
+    }),
     react({
       babel: {
         plugins: [["babel-plugin-react-compiler"]],
