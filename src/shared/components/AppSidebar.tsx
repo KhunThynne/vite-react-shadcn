@@ -1,27 +1,27 @@
-'use client'
-import { useTranslation } from 'react-i18next'
-import { Home, LayoutDashboard, Settings } from 'lucide-react'
-import { NavLink } from 'react-router-dom'
-import { cn } from '@components/ui/utils'
-import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/avatar'
-import clsx from 'clsx'
-import { useSidebarContext } from '../contexts/ProviderSidebar'
-import { SwitchThemeButton } from './SwitchThemeButton'
-import { SwitchLanguageButton } from './SwitchLanguageButton'
+"use client";
+import { useTranslation } from "react-i18next";
+import { Home, LayoutDashboard, Settings } from "lucide-react";
+import { NavLink } from "react-router";
+import { cn } from "@components/ui/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@components/ui/avatar";
+import clsx from "clsx";
+import { useSidebarContext } from "../contexts/ProviderSidebar";
+import { SwitchThemeButton } from "./SwitchThemeButton";
+import { SwitchLanguageButton } from "./SwitchLanguageButton";
 
 export function AppSidebar() {
-  const { t } = useTranslation()
-  const { open } = useSidebarContext()
+  const { t } = useTranslation();
+  const { open } = useSidebarContext();
   const navItems = [
-    { icon: LayoutDashboard, label: t('Sidebar.dashboard'), to: '/' },
-    { icon: Settings, label: t('Sidebar.settings'), to: '/settings' }
-  ]
+    { icon: LayoutDashboard, label: t("Sidebar.dashboard"), to: "/" },
+    { icon: Settings, label: t("Sidebar.settings"), to: "/settings" },
+  ];
 
   return (
     <aside
       className={clsx(
         ` border-r bg-muted/40 lg:block  lg:static absolute  top-0 bottom-0 z-20 transition-all duration-300 ease-in-out`,
-        open ? 'left-0' : '-left-100'
+        open ? "left-0" : "-left-100",
       )}
     >
       <div className="flex h-full  max-lg:w-xs flex-col border-r bg-card ">
@@ -30,7 +30,7 @@ export function AppSidebar() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Home className="size-5" />
             </div>
-            <span>{t('Sidebar.app_name')}</span>
+            <span>{t("Sidebar.app_name")}</span>
           </NavLink>
         </div>
         <div className="flex-1 overflow-auto py-4">
@@ -41,8 +41,10 @@ export function AppSidebar() {
                 to={item.to}
                 className={({ isActive }) =>
                   cn(
-                    'flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:bg-muted hover:text-primary',
-                    isActive ? 'bg-muted text-primary' : 'text-muted-foreground'
+                    "flex items-center gap-3 rounded-lg px-3 py-2 transition-all hover:bg-muted hover:text-primary",
+                    isActive
+                      ? "bg-muted text-primary"
+                      : "text-muted-foreground",
                   )
                 }
               >
@@ -70,5 +72,5 @@ export function AppSidebar() {
         </div>
       </div>
     </aside>
-  )
+  );
 }
