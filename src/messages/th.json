@@ -1,7 +1,7 @@
 {
   "Index": {
-    "title": "Vite + React Starter",
-    "description": "เทมเพลตเริ่มต้นครบวงจรด้วย Vite, React, Tailwind, Shadcn และอื่นๆ"
+    "title": "Vite + React Starter + TanStack Router",
+    "description": "เทมเพลตเริ่มต้นครบวงจรด้วย Vite, React, TanStack Router, Tailwind, Shadcn และอื่นๆ"
   },
   "not_found": {
     "description": "ไม่พบ"
@@ -9,7 +9,13 @@
   "Sidebar": {
     "dashboard": "แดชบอร์ด",
     "settings": "การตั้งค่า",
-    "app_name": "แอพอิเล็กตรอน"
+    "app_name": "React Vite"
+  },
+  "Format": {
+    "date": "{{value, dd/MM/yyyy}}",
+    "time": "{{value, HH:mm:ss}}",
+    "datetime_id": "{{value, HHmmssddMMyyyy}}",
+    "datetime": "{{value, dd/MM/yyyy HH:mm:ss}}"
   },
   "Settings": {
     "title": "การตั้งค่า",

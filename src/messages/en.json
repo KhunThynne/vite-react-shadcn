@@ -1,7 +1,7 @@
 {
   "Index": {
-    "title": "Vite + React Starter",
-    "description": "A comprehensive boilerplate with Vite, React, Tailwind, Shadcn, and more."
+    "title": "Vite + React Starter + TanStack Router",
+    "description": "A comprehensive boilerplate with Vite, React, TanStack Router, Tailwind, Shadcn, and more."
   },
   "not_found": {
     "description": "Not found"
@@ -9,7 +9,13 @@
   "Sidebar": {
     "dashboard": "Dashboard",
     "settings": "Settings",
-    "app_name": "Electron App"
+    "app_name": "React Vite"
+  },
+  "Format": {
+    "date": "{{value, dd/MM/yyyy}}",
+    "time": "{{value, HH:mm:ss}}",
+    "datetime_id": "{{value, HHmmssddMMyyyy}}",
+    "datetime": "{{value, dd/MM/yyyy HH:mm:ss}}"
   },
   "Settings": {
     "title": "Settings",

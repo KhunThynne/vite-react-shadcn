@@ -1,22 +1,24 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { useTranslation } from "react-i18next";
+import { Button } from "./ui/button";
+import reactLogo from "@/assets/react.svg";
 import viteLogo from "/vite.svg";
-import { Button } from "@components/ui/button";
+import tanstackLogo from "/tanstack.png";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@components/ui/card";
-import { useTranslation } from "react-i18next";
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "./ui/card";
+import { Link } from "@tanstack/react-router";
 
-function App() {
+export function AppMain() {
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
   return (
-    <div className="flex items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900 p-4">
+    <div className="flex items-center justify-center h-full ">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center">
           <div className="flex justify-center gap-4 mb-4">
@@ -34,8 +36,15 @@ function App() {
                 alt="React logo"
               />
             </a>
+            <a href="https://tanstack.com" target="_blank" rel="noreferrer">
+              <img
+                src={tanstackLogo}
+                className="size-17 transition-transform hover:scale-110"
+                alt="TanStack logo"
+              />
+            </a>
           </div>
-          <CardTitle className="text-2xl font-bold">Vite + React</CardTitle>
+          <CardTitle className="text-2xl font-bold">Vite</CardTitle>
           <CardDescription>
             Powered by Shadcn UI and Tailwind CSS
           </CardDescription>
@@ -44,7 +53,7 @@ function App() {
           <div className="p-4 bg-secondary rounded-lg">
             <p className="text-lg font-medium">{t("Index.title")}</p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex flex-col   gap-2 justify-center">
             <Button
               onClick={() => setCount((count) => count + 1)}
               size="lg"
@@ -52,11 +61,14 @@ function App() {
             >
               count is {count}
             </Button>
+            <Button size="lg" className="font-semibold" variant={"secondary"}>
+              <Link to="/showcase">Go to App</Link>
+            </Button>
           </div>
           <p className="text-sm text-muted-foreground">
             Edit{" "}
             <code className="bg-muted px-1.5 py-0.5 rounded font-mono text-foreground">
-              src/App.tsx
+              src/routes/index.tsx
             </code>{" "}
             and save to test HMR
           </p>
@@ -70,5 +82,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
