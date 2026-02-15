@@ -11,6 +11,8 @@ import {
   CardTitle,
 } from "@components/ui/card";
 import { useTranslation } from "react-i18next";
+import { SwitchLanguageButton } from "./shared/components/SwitchLanguageButton";
+import { SwitchThemeButton } from "./shared/components/SwitchThemeButton";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,14 +46,15 @@ function App() {
           <div className="p-4 bg-secondary rounded-lg">
             <p className="text-lg font-medium">{t("Index.title")}</p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <Button
               onClick={() => setCount((count) => count + 1)}
-              size="lg"
               className="font-semibold"
             >
               count is {count}
             </Button>
+            <SwitchLanguageButton />
+            <SwitchThemeButton />
           </div>
           <p className="text-sm text-muted-foreground">
             Edit{" "}
@@ -63,7 +66,7 @@ function App() {
         </CardContent>
         <CardFooter className="justify-center">
           <p className="text-xs text-muted-foreground">
-            Click on the Vite and React logos to learn more
+            {t("click-on-the-vite-and-react-logos-to-learn-more")}
           </p>
         </CardFooter>
       </Card>
